@@ -9,25 +9,25 @@ async function renderHistoricalGraphs() {
         recovered
     } = parseData(data);
 
-    new Chart(getContext('#death-graph'), setOptions({
+    new Chart(getContext('#death-graph'), setLineOptions({
         label: 'Mortes',
         borderColor: '#000',
         data: deaths.map(data => data.deaths)
     }));
 
-    new Chart(getContext('#case-graph'), setOptions({
+    new Chart(getContext('#case-graph'), setLineOptions({
         label: 'Casos',
         borderColor: '#f33',
         data: cases.map(data => data.cases)
     }));
 
-    new Chart(getContext('#recover-graph'), setOptions({
+    new Chart(getContext('#recover-graph'), setLineOptions({
         label: 'Recuperados',
         borderColor: '#33f',
         data: recovered.map(data => data.recovered)
     }));
 
-    new Chart(getContext('#all-graph'), setOptions([{
+    new Chart(getContext('#all-graph'), setLineOptions([{
         label: 'Mortes',
         borderColor: '#000',
         data: deaths.map(data => data.deaths)
@@ -41,7 +41,7 @@ async function renderHistoricalGraphs() {
         data: recovered.map(data => data.recovered)
     }]));
 
-    function setOptions(dataset) {
+    function setLineOptions(dataset) {
         return {
             type: 'line',
             data: {
@@ -79,6 +79,25 @@ async function renderComparativeGraphAndData() {
     }
 }
 
-function renderGlobalGraph() {
-    new Chart(getContext('#global-proportion-graph'));
+async function renderGlobalGraph() {
+    const data = await getGlobalData();
+    new Chart(getContext('#global-proportion-graph'), {
+        type: 'pie',
+        data: {
+          labels: ['Testes', 'Casos', 'Mortes', 'Recuperados'],
+          datasets: [
+            {
+              label: 'Proporção no Mundo',
+              backgroundColor: ['#3f3' ,'#f33', '#000','#33f'],
+              data: [data.tests, data.cases, data.deaths, data.recovered],
+              borderWidth: 0
+            }
+          ]
+        },
+        options: {
+            legend: {
+                display: true
+            }
+        }
+    });
 }

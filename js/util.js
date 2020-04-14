@@ -44,3 +44,15 @@ function parseData(data) {
         }
     }
 }
+
+function trackArray(array, check, callback) {
+    const arrayChangeHandler = {
+        set: function (target, property, value, receiver) {
+            target[property] = value;
+            check(property, value) && callback(target);
+            return true;
+        }
+    };
+
+    return new Proxy(array, arrayChangeHandler);
+}

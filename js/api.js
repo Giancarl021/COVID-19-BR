@@ -10,7 +10,7 @@ async function getCountryData(country) {
 }
 
 async function getGlobalData() {
-    
+    return await get(`${baseUrl}/all`);
 }
 
 async function get(url) {
