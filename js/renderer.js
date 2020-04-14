@@ -39,14 +39,20 @@ async function renderHistoricalGraphs() {
         label: 'Recuperados',
         borderColor: '#33f',
         data: recovered.map(data => data.recovered)
-    }]));
+    }], true));
 
-    function setLineOptions(dataset) {
+    function setLineOptions(dataset, legend = false) {
         return {
             type: 'line',
             data: {
                 labels: indexes,
                 datasets: (Array.isArray(dataset) ? dataset : [dataset])
+            },
+            options: {
+                legend: {
+                    display: legend,
+                    position: 'bottom'
+                }
             }
         }
     }
