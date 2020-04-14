@@ -5,9 +5,9 @@ Um site para visualização dos dados estatísticos da COVID-19 no Brasil utliza
 
 ### Gráficos
 A página apresenta 6 gráficos.
-* Três mostram individualmente a evolução dos **casos** , **mortes** e **recuperações** ao decorrer do tempo.
-* Um apresenta o três dados *(casos, mortes e recuperaçções)* em um único gráfico para comparação.
-* E dois apresentam a comparação proporcional de **testes**, **casos** , **mortes** e **recuperações** , sendo um deles no **Brasil** e outro no **Mundo**.
+* Três mostram individualmente a evolução dos **casos**, **mortes** e **recuperações** ao decorrer do tempo.
+* Um apresenta o três dados *(casos, mortes e recuperações)* em um único gráfico para comparação.
+* E dois apresentam a comparação proporcional de **testes**, **casos**, **mortes** e **recuperações**, sendo um deles no **Brasil** e outro no **Mundo**.
 
 ### Dados numéricos
 A página também apresenta dados numéricos sobre o Brasil, sendo eles:
