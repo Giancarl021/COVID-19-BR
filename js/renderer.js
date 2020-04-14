@@ -1,61 +1,7 @@
 Chart.defaults.global.legend.display = false;
 
-const baseUrl = 'https://corona.lmao.ninja/v2';
-const country = 'brazil';
-
-async function getHistorical(country) {
-    return await (await fetch(`${baseUrl}/historical/${country}`)).json();
-};
-
-async function getCountryData(country) {
-    return await (await fetch(`${baseUrl}/countries/${country}`)).json();
-}
-
-function parseData(data) {
-    const deaths = [];
-    const cases = [];
-    const recovered = [];
-
-    for (const period in data.timeline.deaths) {
-        deaths.push({
-            period: formatPeriod(period),
-            deaths: data.timeline.deaths[period]
-        })
-    }
-
-    for (const period in data.timeline.cases) {
-        cases.push({
-            period: formatPeriod(period),
-            cases: data.timeline.cases[period]
-        })
-    }
-
-    for (const period in data.timeline.recovered) {
-        recovered.push({
-            period: formatPeriod(period),
-            recovered: data.timeline.recovered[period]
-        })
-    }
-
-    return {
-        deaths,
-        cases,
-        recovered,
-        indexes: deaths.map(e => e.period)
-    };
-
-    function formatPeriod(period) {
-        const split = period.split('/');
-        return `${formatNumber(split[1])}/${formatNumber(split[0])}/20${split[2]}`;
-
-        function formatNumber(n) {
-            return n < 10 ? '0' + n : n;
-        }
-    }
-}
-
-async function renderGraphs() {
-    const data = await getHistorical(country);
+async function renderHistoricalGraphs() {
+    const data = await getHistoricalCountryData(country);
     const {
         indexes,
         deaths,
@@ -106,7 +52,7 @@ async function renderGraphs() {
     }
 }
 
-async function renderData() {
+async function renderComparativeGraphAndData() {
     const data = await getCountryData(country);
     const keyset = ['tests', 'cases', 'deaths', 'recovered', 'todayCases', 'todayDeaths', 'testsPerOneMillion', 'casesPerOneMillion', 'deathsPerOneMillion'];
     new Chart(getContext('#proportion-graph'), {
@@ -133,13 +79,6 @@ async function renderData() {
     }
 }
 
-function getContext(selector) {
-    return document.querySelector(selector).getContext('2d');
+function renderGlobalGraph() {
+    new Chart(getContext('#global-proportion-graph'));
 }
-
-async function init() {
-    renderData();
-    renderGraphs();
-}
-
-document.addEventListener('DOMContentLoaded', init);
