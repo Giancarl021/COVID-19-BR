@@ -125,6 +125,21 @@ header {
     background-color: #0002;
 }
 
+.data-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.per-million-info {
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
 .data-table h1 {
     font-size: 1.2em;
 }
@@ -182,6 +197,18 @@ footer {
     transition: color .3s, letter-spacing .3s;
     cursor: pointer;
     margin-left: 10px;
+}
+
+.footer-row p {
+    text-align: justify;
+    padding: 5px;
+    color: #444;
+    display: flex;
+}
+
+.footer-row p img.per-million-info {
+    margin: 0;
+    margin-right: 10px;
 }
 
 .footer-data {

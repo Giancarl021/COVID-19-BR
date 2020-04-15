@@ -13,6 +13,7 @@
     <script src="js/util.js"></script>
     <script src="js/api.js"></script>
     <script src="js/renderer.js"></script>
+    <script src="js/events.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -58,7 +59,7 @@
                         <span id="tests"></span>
                     </div>
                     <div class="data-table-row">
-                        <span class="data-type">Por milhão</span>
+                        <span class="data-type">Por milhão<img class="per-million-info" src="img/info.svg" /></span>
                         <span id="testsPerOneMillion"></span>
                     </div>
                 </div>
@@ -69,7 +70,7 @@
                         <span id="cases"></span>
                     </div>
                     <div class="data-table-row">
-                        <span class="data-type">Por milhão</span>
+                        <span class="data-type">Por milhão<img class="per-million-info" src="img/info.svg" /></span>
                         <span id="casesPerOneMillion"></span>
                     </div>
                     <div class="data-table-row">
@@ -88,7 +89,8 @@
                         <span id="todayDeaths"></span>
                     </div>
                     <div class="data-table-row">
-                        <span class="data-type">Por milhão</span>
+                        <span class="data-type">Por milhão<img class="per-million-info"
+                                src="img/info-white.svg" /></span>
                         <span id="deathsPerOneMillion"></span>
                     </div>
                 </div>
@@ -111,11 +113,12 @@
                 Giancarlo Fontela da Luz
             </a>
             <nav>
-                <a href="https://www.linkedin.com/in/giancarl021/" target="_blank"><img src="img/linkedin.svg" />LinkedIn</a>
+                <a href="https://www.linkedin.com/in/giancarl021/" target="_blank">
+                    <img src="img/linkedin.svg" />LinkedIn</a>
                 <a href="https://github.com/Giancarl021" target="_blank"><img src="img/github.svg" />GitHub</a>
                 <a href="https://twitter.com/FontelaLuz" target="_blank"><img src="img/twitter.svg" />Twitter</a>
-                <a href="https://www.youtube.com/channel/UCTUYEhz02etnTVKvemFb-qw" target="_blank"><img
-                        src="img/youtube.svg" />YouTube</a>
+                <a href="https://www.youtube.com/channel/UCTUYEhz02etnTVKvemFb-qw" target="_blank">
+                    <img src="img/youtube.svg" />YouTube</a>
             </nav>
         </div>
         <div class="footer-row">
@@ -125,6 +128,16 @@
             <a href="https://github.com/novelcovid/api" target="_blank" class="footer-data">
                 NovelCOVID API
             </a>
+            <p>
+                Devido às diferentes fontes de dados consumidos nesta API pode ocorrer atrasos entre a geração de
+                gráficos históricos e gráficos de proporção.
+            </p>
+            <p>
+                <img src="img/info.svg" id="info" class="per-million-info" />
+                Dado por milhão representa uma relação proporcional de cada N Dado dividido por milhão de habitantes,
+                dando proporcionalmente o Dado em termos relativos que torna possível a comparação entre países com
+                números absolutos diferentes.
+            </p>
         </div>
     </footer>
 </body>
