@@ -207,13 +207,6 @@ footer {
     text-align: justify;
     padding: 5px;
     color: #444;
-    display: flex;
-    align-items: flex-start;
-}
-
-.footer-row p img.per-million-info {
-    margin: 0;
-    margin-right: 10px;
 }
 
 .footer-data {
