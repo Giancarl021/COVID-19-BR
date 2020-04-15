@@ -17,8 +17,10 @@
 </head>
 
 <body>
-    <h1 class="title">COVID-<span>19</span> no Brasil</h1>
-    <div class="main">
+    <header>
+        <h1 class="title">COVID-<span>19</span> no Brasil</h1>
+    </header>
+    <section class="main">
         <div class="container" id="separated-graphs">
             <div class="sub-container">
                 <h1 class="graph-title">Casos</h1>
@@ -43,7 +45,7 @@
                 <canvas id="global-proportion-graph"></canvas>
             </div>
             <div class="sub-container">
-                <h1 class="graph-title">Proporção</h1>
+                <h1 class="graph-title">Proporção no Brasil</h1>
                 <canvas id="proportion-graph"></canvas>
             </div>
         </div>
@@ -99,7 +101,32 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <footer>
+        <div class="footer-row">
+            <h1 class="footer-header">
+                Desenvolvedor
+            </h1>
+            <a href="https://garbagecollector.me" target="_blank" class="footer-data">
+                Giancarlo Fontela da Luz
+            </a>
+            <nav>
+                <a href="https://www.linkedin.com/in/giancarl021/" target="_blank"><img src="img/linkedin.svg" />LinkedIn</a>
+                <a href="https://github.com/Giancarl021" target="_blank"><img src="img/github.svg" />GitHub</a>
+                <a href="https://twitter.com/FontelaLuz" target="_blank"><img src="img/twitter.svg" />Twitter</a>
+                <a href="https://www.youtube.com/channel/UCTUYEhz02etnTVKvemFb-qw" target="_blank"><img
+                        src="img/youtube.svg" />YouTube</a>
+            </nav>
+        </div>
+        <div class="footer-row">
+            <h1 class="footer-header">
+                Fonte de Dados
+            </h1>
+            <a href="https://github.com/novelcovid/api" target="_blank" class="footer-data">
+                NovelCOVID API
+            </a>
+        </div>
+    </footer>
 </body>
 
 </html>
