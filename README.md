@@ -20,3 +20,9 @@ A página também apresenta dados numéricos sobre o Brasil, sendo eles:
 * Total de casos hoje
 * Total de casos por milhão
 * Total de recuperados
+
+### Outros países
+
+Sinta-se livre para criar um fork ou clonar este repositório.
+
+Caso queria alterar o país de onde vem os dados, altere a constante ``country`` na linha ``2`` do arquivo [api.js](js/api.js) para o país desejado seguindo a documentação da [NovelCovid API](https://github.com/NovelCOVID/API).
