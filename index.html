@@ -19,58 +19,58 @@
 
 <body>
     <header>
-        <h1 class="title">COVID-<span>19</span> no Brasil</h1>
+        <span class="title">COVID-<span>19</span> no Brasil</h1>
     </header>
     <section class="main">
         <div class="container" id="separated-graphs">
             <div class="sub-container">
-                <h1 class="graph-title">Casos</h1>
+                <span class="graph-title">Casos</h1>
                 <canvas id="case-graph"></canvas>
             </div>
             <div class="sub-container">
-                <h1 class="graph-title">Mortes</h1>
+                <span class="graph-title">Mortes</h1>
                 <canvas id="death-graph"></canvas>
             </div>
             <div class="sub-container">
-                <h1 class="graph-title">Recuperações</h1>
+                <span class="graph-title">Recuperações</h1>
                 <canvas id="recover-graph"></canvas>
             </div>
         </div>
         <div class="container reverse">
             <div class="sub-container">
-                <h1 class="graph-title">Visão Geral</h1>
+                <span class="graph-title">Visão Geral</h1>
                 <canvas id="all-graph"></canvas>
             </div>
             <div class="sub-container" id="world-graph">
-                <h1 class="graph-title">Proporção no Mundo</h1>
+                <span class="graph-title">Proporção no Mundo</h1>
                 <canvas id="global-proportion-graph"></canvas>
             </div>
             <div class="sub-container">
-                <h1 class="graph-title">Proporção no Brasil</h1>
+                <span class="graph-title">Proporção no Brasil</h1>
                 <canvas id="proportion-graph"></canvas>
             </div>
         </div>
         <div class="container">
             <div class="data">
                 <div class="data-table tests">
-                    <h1>Testes</h1>
+                    <span>Testes</span>
                     <div class="data-table-row">
                         <span class="data-type">Total</span>
                         <span id="tests"></span>
                     </div>
                     <div class="data-table-row">
-                        <span class="data-type">Por milhão<img class="per-million-info" src="img/info.svg" /></span>
+                        <span class="data-type">Por milhão<img class="per-million-info" src="img/info.svg" alt="info"/></span>
                         <span id="testsPerOneMillion"></span>
                     </div>
                 </div>
                 <div class="data-table cases">
-                    <h1>Casos</h1>
+                    <span>Casos</span>
                     <div class="data-table-row">
                         <span class="data-type">Total</span>
                         <span id="cases"></span>
                     </div>
                     <div class="data-table-row">
-                        <span class="data-type">Por milhão<img class="per-million-info" src="img/info.svg" /></span>
+                        <span class="data-type">Por milhão<img class="per-million-info" src="img/info.svg" alt="info" /></span>
                         <span id="casesPerOneMillion"></span>
                     </div>
                     <div class="data-table-row">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="data-table deaths">
-                    <h1>Mortes</h1>
+                    <span>Mortes</span>
                     <div class="data-table-row">
                         <span class="data-type">Total</span>
                         <span id="deaths"></span>
@@ -90,12 +90,12 @@
                     </div>
                     <div class="data-table-row">
                         <span class="data-type">Por milhão<img class="per-million-info"
-                                src="img/info-white.svg" /></span>
+                                src="img/info-white.svg" alt="info"/></span>
                         <span id="deathsPerOneMillion"></span>
                     </div>
                 </div>
                 <div class="data-table recovered">
-                    <h1>Recuperados</h1>
+                    <span>Recuperados</span>
                     <div class="data-table-row">
                         <span class="data-type">Total</span>
                         <span id="recovered"></span>
@@ -106,7 +106,7 @@
     </section>
     <footer>
         <div class="footer-row">
-            <h1 class="footer-header">
+            <span class="footer-header">
                 Desenvolvedor
             </h1>
             <a href="https://garbagecollector.me" target="_blank" class="footer-data">
@@ -114,17 +114,17 @@
             </a>
             <nav>
                 <a href="https://www.linkedin.com/in/giancarl021/" target="_blank">
-                    <img src="img/linkedin.svg" />LinkedIn</a>
+                    <img src="img/linkedin.svg" alt="linkedin"/>LinkedIn</a>
                 <a href="https://github.com/Giancarl021" target="_blank">
-                    <img src="img/github.svg" />GitHub</a>
+                    <img src="img/github.svg" alt="github"/>GitHub</a>
                 <a href="https://twitter.com/FontelaLuz" target="_blank">
-                    <img src="img/twitter.svg" />Twitter</a>
+                    <img src="img/twitter.svg" alt="twitter"/>Twitter</a>
                 <a href="https://www.youtube.com/channel/UCTUYEhz02etnTVKvemFb-qw" target="_blank">
-                    <img src="img/youtube.svg" />YouTube</a>
+                    <img src="img/youtube.svg" alt="youtube"/>YouTube</a>
             </nav>
         </div>
         <div class="footer-row">
-            <h1 class="footer-header">
+            <span class="footer-header">
                 Fonte de Dados
             </h1>
             <a href="https://github.com/novelcovid/api" target="_blank" class="footer-data">
@@ -147,7 +147,7 @@
             </p>
         </div>
         <div class="footer-row">
-            <h1 class="footer-header">
+            <span class="footer-header">
                 Dado por Milhão
             </h1>
             <p id="info">

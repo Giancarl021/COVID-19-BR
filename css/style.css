@@ -144,7 +144,7 @@ header {
     user-select: none;
 }
 
-.data-table h1 {
+.data-table > span {
     font-size: 1.2em;
 }
 
