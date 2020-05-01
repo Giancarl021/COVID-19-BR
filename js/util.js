@@ -56,3 +56,15 @@ function trackArray(array, check, callback) {
 
     return new Proxy(array, arrayChangeHandler);
 }
+
+let err = false;
+
+function thr() {
+    if(err) return;
+    Swal.fire({
+        icon: 'error',
+        title: '<b>Ooops...</b>',
+        text: 'Houve algum erro na requisição de dados'
+    });
+    err = true;
+}

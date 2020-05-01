@@ -1,9 +1,9 @@
 async function init() {
-    renderHistoricalGraphs();
-    renderComparativeGraphAndData();
-    renderGlobalGraph();
+        renderHistoricalGraphs().catch(thr);
+        renderComparativeGraphAndData().catch(thr);
+        renderGlobalGraph().catch(thr);
 
-    createInfoEvents();
+        createInfoEvents();
 }
 
 document.addEventListener('DOMContentLoaded', init);

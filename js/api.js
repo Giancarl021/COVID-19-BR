@@ -1,4 +1,4 @@
-const baseUrl = 'https://corona.lmao.ninja/v2';
+const baseUrl = 'https://disease.sh/v2';
 const country = 'brazil';
 
 async function getHistoricalCountryData(country) {
@@ -14,15 +14,5 @@ async function getGlobalData() {
 }
 
 async function get(url) {
-    let response, json;
-    try {
-        response = await fetch(url);
-        json = await response.json();
-    } catch (err) {
-        Swal.fire({
-            icon: 'error',
-            title: '<b>Ooops...</b>',
-            text: 'Houve algum erro na requisição de dados'
-        });
-    }
+    return await (await fetch(url)).json();
 }
